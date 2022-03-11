@@ -1,4 +1,4 @@
-let posts=[ ];
+let posts=[];
 
 const likedPostsId = [];
 const reportedPostsId = [];
@@ -39,7 +39,6 @@ const switchTab = (id) => {
         document.getElementById( "liked" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
-
         displayLikedPosts();
     } else {
         document.getElementById( "reported" ).style.display = "block";
@@ -47,7 +46,8 @@ const switchTab = (id) => {
         document.getElementById( "liked" ).style.display = "none";
 
         displayReportedPosts();
-    }
+  }
+  document.getElementById('about-javaScript').style.display = 'none';
 };
 
 const createPost = (post) => {
@@ -85,7 +85,7 @@ const createPost = (post) => {
               <div class="post__footer">
                 <div class="post__buttons">
                   <button class="post__button" onclick="addToLiked(${post.id})">
-                  <i class="fa-solid fa-heart ${isLiked(post.id) && "text-danger"}"></i>
+                  <i class="fa-solid fa-heart ${isLiked(post?.id) && "text-danger"}"></i>
                     
                   </button>
                   <button class="post__button">
@@ -96,13 +96,13 @@ const createPost = (post) => {
                   <div class="post__indicators"></div>
 
                   <button class="post__button post__button--align-right" onclick="reportPost(${
-                      post.id
+                      post?.id
                   })">
                     <i class="fa-solid fa-ban"></i>
                   </button>
                 </div>
 
-                <div class="post__content">${displayContent(post.description)}</div>
+                <div class="post__content">${displayContent(post?.description)}</div>
 
                 <div class="post__infos">
                   <div class="post__likes">
@@ -120,9 +120,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments[0]?.user}
+                          ${post?.comments[0]?.user}
                       </a>
-                      ${post.comments[0]?.text}
+                      ${post?.comments[0]?.text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
@@ -133,7 +133,7 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
-    const productsContainer = document.getElementById( "posts" );
+    const productsContainer = document.getElementById("posts");
     productsContainer.innerHTML = "";
 
     posts.forEach((post) => {
@@ -143,18 +143,21 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+
+  document.getElementById("liked").innerHTML = "";
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
         const div = createPost(post);
-        document.getElementById( "liked" ).appendChild(div);
+        document.getElementById("liked").appendChild(div);
     });
 };
 
 const displayReportedPosts = () => {
+  document.getElementById("reported").innerHTML = "";
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    reportedPosts.forEach((post) => {
         const div = createPost(post);
-        document.getElementById( "reported" ).appendChild(div);
+        document.getElementById("reported").appendChild(div);
     });
 };
 

@@ -31,9 +31,9 @@
     </head>
 
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor</a>
+        <header class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand fw-bold" href="#">Insta-Sohor</a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -51,15 +51,15 @@
                     id="navbarSupportedContent"
                 >
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                        <li class="nav-link active" role="button" onclick="switchTab('posts')">
                             <i class="fa-solid fa-house"></i>
                         </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                        <li class="nav-link active" role="button" onclick="switchTab('liked')">
                             <i class="fa-solid fa-heart text-danger"></i>
                         </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                        <li class="nav-link active" role="button" onclick="switchTab('reported')">
                             <i class="fa-solid fa-eye-slash"></i>
                         </li>
                     </ul>
@@ -77,9 +77,8 @@
                 <h1>Reported posts</h1>
             </div>
         </main>
-        <hr class="container horizontal-line">
-
-        <footer class="container mt-3">
+        <!-- About JavaScript -->
+        <section id="about-javaScript" class="container mt-3">
             <div class="d-flex justify-content-center pt-2">
                 <h1>About javascript </h1>
             </div>
@@ -89,10 +88,19 @@
                         <div class="card h-100">
         
                             <div class="card-body">
-                                <h5 class="card-title">How dose Javascript Work?</h5>
-                                <p class="card-text">Javascript is an interpreted language and client-side scripting language  .You know what this is'nt a complied language?.JavaScript has V8 Engine in Browser's.
-                                    V8 Engine receive javascript code and  the engine runs the source code to obtain the output. As we already know, JavaScript is an interpreted language that means it gets executed in line by line manner.
-                                    The modern JavaScript engines also has JIT. I know, they have a compiler.As we already know, JavaScript is an interpreted language and they have a compiler that means it gets executed in line by line manner.</p>
+                                <h5 class="card-title fw-bold">How dose Javascript Work?</h5>
+                                <p class="card-text">
+                                    JS short form of the javaScript. JavaScript is called a high label Interpreted language.
+                                    The javaScript allow you to make web pages more interactive by accessing and modifying the content and markup used in a web page. while it is being viewed in the browser.
+                                    Also you can use javascript to add elemnets, attributes, and text to the page, or remove them . for example:
+                                    
+                                    <ul>
+                                        <li>Add a paragraph of text after the first<>h1</li>
+                                        <li>Change the value of class atributes to trigger new CSS rulse for this elements</li>
+                                        <li>Change the size or position of an img element</li>
+                                    </ul>
+
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -100,9 +108,13 @@
                         <div class="card h-100">
         
                             <div class="card-body">
-                                <h5 class="card-title">How dose Javascript Event Loop work?</h5>
-                                <p class="card-text">javascript is single-threaded, but the browsers API act as separat threads. The Event Loop  clear the way this process.the event loop work asynchronouslly . it continuously cheack Whether the call stack is empty.
-                                    when the call stack empty then new functions are added from the event queue. If it is not, then the current function call is  prepared.</p>
+                                <h5 class="card-title fw-bold">How dose Javascript Event Loop work?</h5>
+                                <p class="card-text">
+                                    Event are the browser's way of indicating when something has happened(such as  when a page has  finished loading or a button has been clicked).
+                                    Binding is the process of stating which event you are waiting to happend and which element you are waiting for that event to happend upon.
+
+                                    When an event occurs on an element, it can triggera javaScript function. When this function then changes the web page in some way, it feels interective because it has response to the user.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -110,9 +122,13 @@
                         <div class="card h-100">
         
                             <div class="card-body">
-                                <h5 class="card-title">LocalStorage Vs SessionStorage</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                                    additional content.</p>
+                                <h5 class="card-title fw-bold">LocalStorage Vs SessionStorage</h5>
+                                <p class="card-text">
+                                    The localStorage and the SessionStorage behavior are same but the different is the localStorage keeps store user information data and this data will not be delete when the user closed the browser window it will be available.
+                                    <br>
+                                    On the other hand sessionStorage data will be deleted when the user will closed the web browser by user.
+
+                                </p>
                             </div>
                         </div>
                     </div>
