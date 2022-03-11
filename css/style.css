@@ -237,7 +237,13 @@ img {
   margin: 10px 0;
   color: gray;
 }
-
+#about-javaScript{
+  background-color: rgb(247, 244, 244);
+}
+#js-style-title{
+  font-style: italic;
+  color: rgb(13, 114, 236);
+}
 #liked{
   display: none;
 }
